@@ -1,10 +1,10 @@
 body {
     font-family: 'Roboto Mono',monospace;
-    min-height: 400px;
-    background-image: url('https://www.alura.com.br/assets/img/imersoes/dev-2021/dia-1-conversor-de-moedas.png');
+    min-height: 854px;
+    background-image: url('https://www.alura.com.br/assets/img/imersoes/dev-2021/dia-2-calculadora-certa.png');
     background-color: #000000;
-    background-size: 100vh;
-    background-position: center bottom;
+    background-size: cover;
+    background-position: center top;
     background-repeat: no-repeat;
   }
   
@@ -26,6 +26,24 @@ body {
   
   .page-logo {
     width: 200px;
+  }
+  
+  .calculadora {
+    width: 264px;
+    height:360px;
+    background-image: url('https://www.alura.com.br/assets/img/imersoes/dev-2021/dia-2-calculadora-calc.png');
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  h2 {
+    position: absolute;
+    font-size:16px;
+    font-weight:bold;
+    top: 142px;
+    left: calc(50% - 72.5px);
+    width: 145px;
+    text-align:center;
   }
   
   .alura-logo {
