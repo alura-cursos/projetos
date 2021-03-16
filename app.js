@@ -1,28 +1,19 @@
-var primeiroValor = parseInt(prompt("Digite o primeiro valor:"))
-var segundoValor = parseInt(prompt("Digite o segundo valor:"))
+// alert - document.write - console.log
+var numeroSecreto = parseInt(Math.random() * 10)
+alert(numeroSecreto)
+var tentativas = 3
 
-var operacao = prompt("Digite 1 para fazer uma divisão, 2 para multiplicação, 3 para soma e 4 para subtração: ")
+while (tentativas > 0) {
+  var chute = parseInt(prompt("Digite um número entre 0 e 10"))
 
-if (operacao == 1) {
-  var resultado = primeiroValor / segundoValor
-  document.write("<h2>" + primeiroValor + " / " + segundoValor + " = " + resultado + "</h2>")
-} else if (operacao == 2) {
-  var resultado = primeiroValor * segundoValor
-  document.write("<h2>" + primeiroValor + " x " + segundoValor + " = " + resultado + "</h2>")
-} else if (operacao == 3) {
-  var resultado = primeiroValor + segundoValor
-  document.write("<h2>" + primeiroValor + " + " + segundoValor + " = " + resultado + "</h2>")
-} else if (operacao == 4) {
-  var resultado = primeiroValor - segundoValor
-  document.write("<h2>" + primeiroValor + " - " + segundoValor + " = " + resultado + "</h2>")
-} else {
-  document.write("<h2>Opção inválida</h2>")
+  if (numeroSecreto == chute) {
+    alert("Acertou")
+    break
+  } else if (chute > numeroSecreto) {
+    alert("O número secreto é menor")
+    tentativas = tentativas - 1
+  } else if (chute < numeroSecreto) {
+    alert("O numero secreto é maior")
+    tentativas = tentativas - 1
+  } 
 }
-
-//escrevendo na tela - document.write()
-//concatenação (juntar palavra com variáveis) - ("palavra" + variavel)
-// == - comparação é diferente do = que usamos para fazer atribuição
-
-//if = se
-//else = senão
-//else if = senão se

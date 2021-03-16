@@ -1,10 +1,10 @@
 body {
     font-family: 'Roboto Mono',monospace;
-    min-height: 854px;
-    background-image: url('https://www.alura.com.br/assets/img/imersoes/dev-2021/dia-2-calculadora-certa.png');
+    min-height: 600px;
+    background-image: url('https://www.alura.com.br/assets/img/imersoes/dev-2021/dia-03-mentalista.png');
     background-color: #000000;
     background-size: cover;
-    background-position: center top;
+    background-position: center bottom;
     background-repeat: no-repeat;
   }
   
@@ -28,27 +28,15 @@ body {
     width: 200px;
   }
   
-  .calculadora {
-    width: 264px;
-    height:360px;
-    background-image: url('https://www.alura.com.br/assets/img/imersoes/dev-2021/dia-2-calculadora-calc.png');
-    margin: 0 auto;
-    position: relative;
-  }
-  
-  h2 {
-    position: absolute;
-    font-size:16px;
-    font-weight:bold;
-    top: 142px;
-    left: calc(50% - 72.5px);
-    width: 145px;
-    text-align:center;
-  }
-  
   .alura-logo {
     width: 40px;
     position: absolute;
     top: 10px;
     right:10px;
+  }
+  
+  @media (max-height: 500px) {
+    body {
+      min-height:800px;
+    }
   }
