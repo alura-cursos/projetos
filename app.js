@@ -1,62 +1,79 @@
-var paulo = {
-    nome: "Paulo",
-    vitorias: 2,
-    empates: 5,
-    derrotas: 1,
-    pontos: 0
-}
-var rafa = {
-    nome: "Rafa",
-    vitorias: 3,
-    empates: 5,
-    derrotas: 2,
-    pontos: 0
-}
-
-rafa.pontos = calculaPontos(rafa)
-paulo.pontos = calculaPontos(paulo)
-
-function calculaPontos(jogador) {
-    var pontos = (jogador.vitorias * 3) + jogador.empates
-    return pontos
-}
-
-var jogadores = [rafa, paulo]
-
-exibirJogadoresNaTela(jogadores)
-
-function exibirJogadoresNaTela(jogadores) {
-    var html = ""
-    for (var i = 0; i < jogadores.length; i++) {
-        html += "<tr><td>" + jogadores[i].nome + "</td>"
-        html += "<td>" + jogadores[i].vitorias + "</td>"
-        html += "<td>" + jogadores[i].empates + "</td>"
-        html += "<td>" + jogadores[i].derrotas + "</td>"
-        html += "<td>" + jogadores[i].pontos + "</td>"
-        html += "<td><button onClick='adicionarVitoria(" + i + ")'>Vitória</button></td>"
-        html += "<td><button onClick='adicionarEmpate(" + i + ")'>Empate</button></td>"
-        html += "<td><button onClick='adicionarDerrota(" + i + ")'>Derrota</button></td></tr>"
+var cartaPaulo = {
+    nome: "Seiya de Pegaso",
+    atributos: {
+        ataque: 80,
+        defesa: 60,
+        magia: 90
     }
-    var tabelaJogadores = document.getElementById('tabelaJogadores')
-    tabelaJogadores.innerHTML = html
 }
 
-function adicionarVitoria(i) {
-    var jogador = jogadores[i]
-    jogador.vitorias++
-    jogador.pontos = calculaPontos(jogador)
-    exibirJogadoresNaTela(jogadores)
+var cartaRafa = {
+    nome: "Bulbasauro",
+    atributos: {
+        ataque: 70,
+        defesa: 65,
+        magia: 85
+    }
 }
 
-function adicionarEmpate(i) {
-    var jogador = jogadores[i]
-    jogador.empates++
-    jogador.pontos = calculaPontos(jogador)
-    exibirJogadoresNaTela(jogadores)
+var cartaGui = {
+    nome: "Lorde Darth Vader",
+    atributos: {
+        ataque: 88,
+        defesa: 62,
+        magia: 90
+    }
 }
 
-function adicionarDerrota(i) {
-    var jogador = jogadores[i]
-    jogador.derrotas++
-    exibirJogadoresNaTela(jogadores)
+
+var cartaMaquina
+var cartaJogador
+var cartas = [cartaPaulo, cartaRafa, cartaGui]
+// 0          1           2
+
+function sortearCarta() {
+    var numeroCartaMaquina = parseInt(Math.random() * 3)
+    cartaMaquina = cartas[numeroCartaMaquina]
+
+    var numeroCartaJogador = parseInt(Math.random() * 3)
+    while (numeroCartaJogador == numeroCartaMaquina) {
+        numeroCartaJogador = parseInt(Math.random() * 3)
+    }
+    cartaJogador = cartas[numeroCartaJogador]
+    console.log(cartaJogador)
+
+    document.getElementById('btnSortear').disabled = true
+    document.getElementById('btnJogar').disabled = false
+    exibirOpcoes()
+}
+
+function exibirOpcoes() {
+    var opcoes = document.getElementById('opcoes')
+    var opcoesTexto = ""
+    for (var atributo in cartaJogador.atributos) {
+        opcoesTexto += "<input type='radio' name='atributo' value='" + atributo + "'>" + atributo
+    }
+    opcoes.innerHTML = opcoesTexto
+}
+
+function obtemAtributoSelecionado() {
+    var radioAtributo = document.getElementsByName('atributo')
+    for (var i = 0; i < radioAtributo.length; i++) {
+        if (radioAtributo[i].checked) {
+            return radioAtributo[i].value
+        }
+    }
+}
+
+function jogar() {
+    var atributoSelecionado = obtemAtributoSelecionado()
+
+    if (cartaJogador.atributos[atributoSelecionado] > cartaMaquina.atributos[atributoSelecionado]) {
+        alert('Venceu a carta máquina')
+    } else if (cartaJogador.atributos[atributoSelecionado] < cartaMaquina.atributos[atributoSelecionado]) {
+        alert('Perdeu. Carta da máquina é maior')
+    } else {
+        alert('Empatou!')
+    }
+    console.log(cartaMaquina)
 }
