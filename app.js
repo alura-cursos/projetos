@@ -1,19 +1,5 @@
-// alert - document.write - console.log
-var numeroSecreto = parseInt(Math.random() * 10)
-alert(numeroSecreto)
-var tentativas = 3
+var listaFilmes = ["https://m.media-amazon.com/images/M/MV5BMDU2ZWJlMjktMTRhMy00ZTA5LWEzNDgtYmNmZTEwZTViZWJkXkEyXkFqcGdeQXVyNDQ2OTk4MzI@._V1_UX182_CR0,0,182,268_AL_.jpg", "https://m.media-amazon.com/images/M/MV5BNzVlY2MwMjktM2E4OS00Y2Y3LWE3ZjctYzhkZGM3YzA1ZWM2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg", "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX182_CR0,0,182,268_AL_.jpg"]
 
-while (tentativas > 0) {
-  var chute = parseInt(prompt("Digite um número entre 0 e 10"))
-
-  if (numeroSecreto == chute) {
-    alert("Acertou")
-    break
-  } else if (chute > numeroSecreto) {
-    alert("O número secreto é menor")
-    tentativas = tentativas - 1
-  } else if (chute < numeroSecreto) {
-    alert("O numero secreto é maior")
-    tentativas = tentativas - 1
-  } 
+for (var i = 0; i < listaFilmes.length; i++){
+  document.write("<img src=" + listaFilmes[i] + ">")
 }
