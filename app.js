@@ -1,6 +1,6 @@
 // alert - document.write - console.log
 var numeroSecreto = parseInt(Math.random() * 10)
-alert(numeroSecreto)
+//alert(numeroSecreto)
 var tentativas = 3
 
 while (tentativas > 0) {
