@@ -19,7 +19,7 @@ body {
     margin: 5px 0;
 }
 
-button {
+button, .button-jogar {
     padding: .8rem 1.5rem;
     margin: 1rem 0;
     border-radius: 5px;
@@ -31,15 +31,21 @@ h2 {
     color: white;
 }
 
-#carta-jogador {
+#carta-jogador, #carta-maquina {
     width: 360px;
     height: 500px;
     overflow: auto;
     border-radius: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     margin: 0 auto;
     display: flex;
     align-items: flex-end;
+    position: relative;
+    background-size: 350px 300px;
+    background-repeat: no-repeat;
+    background-position-x: 5px;
+    background-position-y: 10px;
+    border-radius: 33px;
 }
 
 #carta-jogador h3 {
@@ -59,13 +65,55 @@ h2 {
 
 .carta-status {
     height: 160px;
-    margin: 1.5rem;
+    margin: 2rem;
+    color: white;
+    z-index: 2;
 }
 
 .carta-status input {
     margin: 20px 10px;
 }
 
-.opcoes {
+.resultado-final {
     color: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weigth: bolder;
+    padding: 1rem;
+    border: 2px solid black;
+    background-color: black;
+}
+
+.--spacing {
+    margin-left: 2.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.carta-subtitle {
+    z-index: 2;
+    position: absolute;
+    top: 16px;
+    left: 37px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+#cartas {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.carta-status p {
+    margin-bottom: 2rem;
 }
