@@ -100,6 +100,7 @@ form {
 }
 
 .carta-subtitle {
+    color: #000000;
     z-index: 2;
     position: absolute;
     top: 16px;
