@@ -1,4 +1,4 @@
-var cartaPaulo = {
+var cartaSeiya = {
     nome: "Seiya de Pegaso",
     imagem: "https://i.pinimg.com/originals/c2/1a/ac/c21aacd5d092bf17cfff269091f04606.jpg",
     atributos: {
@@ -8,7 +8,7 @@ var cartaPaulo = {
     }
 }
 
-var cartaRafa = {
+var cartaPokemon = {
     nome: "Bulbasauro",
     imagem: "http://4.bp.blogspot.com/-ZoCqleSAYNc/UQgfMdobjUI/AAAAAAAACP0/s_iiWjmw2Ys/s1600/001Bulbasaur_Dream.png",
     atributos: {
@@ -18,7 +18,7 @@ var cartaRafa = {
     }
 }
 
-var cartaGui = {
+var cartaStarWars = {
     nome: "Lorde Darth Vader",
     imagem: "https://images-na.ssl-images-amazon.com/images/I/51VJBqMZVAL._SX328_BO1,204,203,200_.jpg",
     atributos: {
@@ -80,7 +80,7 @@ var cartaMarvel = {
 
 var cartaMaquina
 var cartaJogador
-var cartas = [cartaPaulo, cartaRafa, cartaGui, cartaLol, cartaNaruto, cartaHarry, cartaBatman, cartaMarvel]
+var cartas = [cartaSeiya, cartaPokemon, cartaStarWars, cartaLol, cartaNaruto, cartaHarry, cartaBatman, cartaMarvel]
 //            0           1           2          3         4            5            6           7          
 
 var pontosJogador = 0
@@ -104,13 +104,13 @@ function atualizaPlacar() {
 }
 
 function sortearCarta() {
-    var numeroCartaMaquina = parseInt(Math.random() * cartas.length)
-    cartaMaquina = cartas[numeroCartaMaquina]
-    cartas.splice(numeroCartaMaquina, 1)
-
     var numeroCartaJogador = parseInt(Math.random() * cartas.length)
     cartaJogador = cartas[numeroCartaJogador]
     cartas.splice(numeroCartaJogador, 1)
+
+    var numeroCartaMaquina = parseInt(Math.random() * cartas.length)
+    cartaMaquina = cartas[numeroCartaMaquina]
+    cartas.splice(numeroCartaMaquina, 1)
 
     document.getElementById('btnSortear').disabled = true
     document.getElementById('btnJogar').disabled = false
