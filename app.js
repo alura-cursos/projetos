@@ -1,4 +1,4 @@
-var cartaPaulo = {
+var cartaSeiya = {
     nome: "Seiya de Pegaso",
     atributos: {
         ataque: 80,
@@ -7,7 +7,7 @@ var cartaPaulo = {
     }
 }
 
-var cartaRafa = {
+var cartaPokemon = {
     nome: "Bulbasauro",
     atributos: {
         ataque: 70,
@@ -16,7 +16,7 @@ var cartaRafa = {
     }
 }
 
-var cartaGui = {
+var cartaStarWars = {
     nome: "Lorde Darth Vader",
     atributos: {
         ataque: 88,
@@ -28,8 +28,8 @@ var cartaGui = {
 
 var cartaMaquina
 var cartaJogador
-var cartas = [cartaPaulo, cartaRafa, cartaGui]
-// 0          1           2
+var cartas = [cartaSeiya, cartaPokemon, cartaStarWars]
+//            0           1             2
 
 function sortearCarta() {
     var numeroCartaMaquina = parseInt(Math.random() * 3)
@@ -69,7 +69,7 @@ function jogar() {
     var atributoSelecionado = obtemAtributoSelecionado()
 
     if (cartaJogador.atributos[atributoSelecionado] > cartaMaquina.atributos[atributoSelecionado]) {
-        alert('Venceu a carta máquina')
+        alert('Venceu! Sua carta é maior')
     } else if (cartaJogador.atributos[atributoSelecionado] < cartaMaquina.atributos[atributoSelecionado]) {
         alert('Perdeu. Carta da máquina é maior')
     } else {
