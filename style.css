@@ -1,124 +1,49 @@
 body {
-    font-family: 'Roboto Mono', monospace;
-    min-height: 854px;
-    background-image: url('https://www.alura.com.br/assets/img/imersoes/dev-2021/dia-07-super-trunfo-bg.png');
-    background-color: #000000;
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-    padding-bottom: 20vh;
-}
-
-.container {
-    text-align: center;
-    padding: 20px;
-}
-
-.page-title {
-    color: #ffffff;
-    margin: 5px 0;
-}
-
-button {
-    width: 10rem;
-    max-width: 10rem;
-    padding: .8rem 1.5rem;
-    margin: 2rem auto;
-    border-radius: 5px;
-    border: none;
-    font-size: 1rem;
-}
-
-h2 {
-    color: white;
-}
-
-#carta-jogador, #carta-maquina {
-    width: 360px;
-    height: 500px;
-    overflow: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    margin: 0 auto;
-    display: flex;
-    align-items: flex-end;
-    position: relative;
-    background-size: 350px 300px;
-    background-repeat: no-repeat;
-    background-position-x: 10px;
-    background-position-y: 5px;
-    border-radius: 33px;
-}
-
-#carta-jogador h3 {
-    text-align: center;
-}
-
-.carta-imagem {
+    background-color: #ff5722;
+    font-family: 'Open Sans';
+  }
+  
+  section {
+    -webkit-box-shadow: 5px 5px 50px 8px rgba(0,0,0,0.59); 
+    box-shadow: 5px 5px 50px 8px rgba(0,0,0,0.59);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    margin-top: 100px;
+    background-color: white;
+    padding: 15px;
     border: 1px solid black;
-    height: 100px;
-    margin: 10px;
-}
-
-.carta-imagem img {
-    width: 100%;
-    height: 100%;
-}
-
-.carta-status {
-    height: 160px;
-    margin: 2rem;
-    color: white;
-    z-index: 2;
-}
-
-.carta-status input {
-    margin: 20px 10px;
-}
-
-.carta-status p {
-    margin-bottom: 2rem;
-}
-
-.resultado-final {
-    color: white;
-    font-size: 2rem;
-    text-transform: uppercase;
-    font-weigth: bolder;
-    padding: 1rem;
-    border: 2px solid black;
-    background-color: black;
-}
-
-.--spacing {
-    margin-left: 2.5rem;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-}
-
-.carta-subtitle {
-    z-index: 2;
-    position: absolute;
-    top: 16px;
-    left: 37px;
-    font-weight: 800;
-    text-transform: uppercase;
-}
-
-#cartas {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-#placar, #quantidade-cartas {
-    color: white;
-}
+    border-radius: 5px;
+  }
+  
+  section h1 {
+    font-size: 20px;
+  }
+  
+  header {
+    background-image: url('https://cdn.cinepop.com.br/2021/02/pokemon-list.jpg');
+    /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/background-size   */
+    background-size: cover;
+    height: 80px;
+    border-radius: 5px;
+  }
+  
+  div {
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid black;
+    /* propriedade visual: valor   */
+    background-color: #bac3d6;
+  }
+  
+  img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    transform: translateY(-50%);
+    border: 8px solid white;
+  }
